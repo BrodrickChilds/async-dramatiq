@@ -77,7 +77,7 @@ def async_actor(
         actor = dq.actor(
             func,
             actor_class=actor_class,
-            priority=priority,
+            priority=priority.to_rabbitmq_priority(),
             queue_name=queue_name,
             **kwargs,
         )
